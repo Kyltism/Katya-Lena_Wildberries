@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+}
+
+.products {
+    padding: 0 32px;
+}
+
+.sectionText {
+
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 8px;
+}
