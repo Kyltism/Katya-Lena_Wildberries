@@ -1,29 +1,37 @@
-let products = document.createElement('section');
-products.className = 'products';
-document.body.append(products);
+let goods = document.getElementById('goods');
 
-let hitsOfSales = document.createElement('div');
-hitsOfSales.className = 'hitsOfSales';
-products.append(hitsOfSales);
+let pictureNames = document.getElementById('pictureNames');
 
-let sectionText = document.createElement('h2');
-sectionText.className = 'sectionText';
-sectionText.innerHTML = 'Хиты продаж'
-hitsOfSales.append(sectionText);
+// let imgSrc = '';
 
-let goods = document.createElement('div');
-goods.className = 'goods';
-hitsOfSales.append(goods);
+// function createDiv(className) {
+//     let imgSrc = document.createElement('div');
+//     imgSrc.className = className;
+//     return imgSrc;
+// }
 
-for (var i = 0; i < 7; i++) {
-    let goodsCard = document.createElement('div');
-    goodsCard.className = 'goodsCard';
-    goods.append(goodsCard);
-    let cardImg = document.createElement('div');
-    cardImg.className = 'cardImg';
-    goodsCard.append(cardImg)
-    
-}
+// for (var i = 0; i < 10; i++) {
+//     goods.append(createDiv('img'));
+// }
 
+let goodsCard = [];
+fetch('https://624dcdf853326d0cfe52fb09.mockapi.io/cards/cards')
+    .then((Response) => {
+        return Response.json()
+    })
 
+    .then((goodsCard) => {
+
+        goodsCard.forEach(item => {
+            const img = document.createElement('img');
+            img.className = 'cardImg';
+            img.src = item.src;
+            img.id = item.id;
+            goods.append(img);
+
+            const span = document.createElement('span');
+            span.innerHTML = item.name;
+            pictureNames.append(span);
+        })
+    })
 

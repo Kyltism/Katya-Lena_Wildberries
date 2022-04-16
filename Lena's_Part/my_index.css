@@ -5,6 +5,7 @@
     font-family: 'Open Sans';
 }
 
+
 .products {
     padding: 0 32px;
 }
@@ -16,4 +17,24 @@
     font-weight: 700;
     margin-bottom: 20px;
     margin-top: 8px;
+}
+
+.goods {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 27px;
+}
+
+.cardImg {
+    height: 250px;
+    width: 191px;
+    border-radius: 10px;
+}
+
+.pictureNames {
+    display: flex;
+    justify-content: space-between;
+}
+span{
+   
 }
