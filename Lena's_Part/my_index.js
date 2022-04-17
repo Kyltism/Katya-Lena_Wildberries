@@ -2,17 +2,18 @@ let goods = document.getElementById('goods');
 
 let pictureNames = document.getElementById('pictureNames');
 
-// let imgSrc = '';
+function createDiv(className) {
+    let imgSrc = document.createElement('div');
+    imgSrc.className = className;
+    imgSrc.id = 'img';
+    return imgSrc;
+}
 
-// function createDiv(className) {
-//     let imgSrc = document.createElement('div');
-//     imgSrc.className = className;
-//     return imgSrc;
-// }
 
-// for (var i = 0; i < 10; i++) {
-//     goods.append(createDiv('img'));
-// }
+for (var i = 0; i < 10; i++) {
+    goods.append(createDiv('img'));
+}
+let imgOfGoods = document.getElementById('img')
 
 let goodsCard = [];
 fetch('https://624dcdf853326d0cfe52fb09.mockapi.io/cards/cards')
@@ -27,11 +28,14 @@ fetch('https://624dcdf853326d0cfe52fb09.mockapi.io/cards/cards')
             img.className = 'cardImg';
             img.src = item.src;
             img.id = item.id;
-            goods.append(img);
+            imgOfGoods.append(img);
 
             const span = document.createElement('span');
             span.innerHTML = item.name;
-            pictureNames.append(span);
+            imgOfGoods.append(span);
         })
     })
+
+
+
 
