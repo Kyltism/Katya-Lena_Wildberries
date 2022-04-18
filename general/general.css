@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    max-width: 1600px;
     margin: 0;
     outline: none;
     font-family: 'Open Sans';
@@ -18,7 +17,7 @@
 
 
 .header__logo {
-    font-size: 30PX;
+    font-size: 40px;
     font-weight: bold;
     color: #FFFFFF;
     text-decoration: none;
