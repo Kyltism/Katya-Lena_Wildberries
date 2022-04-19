@@ -72,7 +72,6 @@ function showSlides(n) {
 
 
 
-
 let goods = document.getElementById('goods');
 
 let pictureNames = document.getElementById('pictureNames');
@@ -90,6 +89,14 @@ fetch('https://624dcdf853326d0cfe52fb09.mockapi.io/cards/cards')
             const div = document.createElement('div');
             div.className = 'container';
 
+            const fastView = document.createElement('div');
+            fastView.className = 'button';
+            div.appendChild(fastView);
+
+            const fastButton = document.createElement('button');
+            fastButton.className = 'fastButton';
+            fastView.appendChild(fastButton);
+
             const priceGoods = document.createElement('div');
             priceGoods.className = 'priceGoods';
 
@@ -97,7 +104,7 @@ fetch('https://624dcdf853326d0cfe52fb09.mockapi.io/cards/cards')
             img.className = 'cardImg';
             img.src = item.src;
             img.id = item.id;
-            div.appendChild(img);
+            fastView.appendChild(img);
 
             const price = document.createElement('p');
             price.innerHTML = item.price;
@@ -109,16 +116,16 @@ fetch('https://624dcdf853326d0cfe52fb09.mockapi.io/cards/cards')
             oldPrice.className = 'oldPrice';
             priceGoods.appendChild(oldPrice);
 
+            div.appendChild(priceGoods)
+            
 
             const p = document.createElement('p');
             p.innerHTML = item.name;
             p.className = 'nameGoods'
             div.appendChild(p);
 
-            div.appendChild(priceGoods)
-
-            goods.append(div);
             
+            goods.append(div);
 
         })
     })
