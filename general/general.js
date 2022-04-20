@@ -71,7 +71,6 @@ function showSlides(n) {
 
 
 
-
 let goods = document.getElementById('goods');
 
 let pictureNames = document.getElementById('pictureNames');
@@ -141,12 +140,13 @@ fetch('https://624dcdf853326d0cfe52fb09.mockapi.io/cards/cards')
     })
     .then(() => {
         //получаем идентификатор элемента
-        let but = [...document.getElementsByClassName('fastButton')];
-
+        let but = [ ...document.getElementsByClassName('fastButton')];
+       
         but.forEach((item) => {
-            ;
+            
             let img = item.nextSibling;
-                        //вешаем на него событие
+            
+            //вешаем на него событие
             item.onclick = () => {
                 //производим какие-то действия
                 if (img.style.width == '240px' && img.style.height == '300px');
