@@ -71,11 +71,6 @@ function showSlides(n) {
 
 
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> f9618102f8b2d6f9c50df238e8c4cd606bc79aaf
 let goods = document.getElementById('goods');
 
 let pictureNames = document.getElementById('pictureNames');
@@ -125,7 +120,6 @@ fetch('https://624dcdf853326d0cfe52fb09.mockapi.io/cards/cards')
 
     })
   })
-<<<<<<< HEAD
   .then(() => {
     //получаем идентификатор элемента
     let but = [...document.getElementsByClassName('fastButton')];
@@ -142,10 +136,7 @@ fetch('https://624dcdf853326d0cfe52fb09.mockapi.io/cards/cards')
           img.style.width = '500px';
           img.style.height = '560px';
         }
-=======
-
->>>>>>> f9618102f8b2d6f9c50df238e8c4cd606bc79aaf
-
+      }
 
 
 
@@ -153,7 +144,7 @@ fetch('https://624dcdf853326d0cfe52fb09.mockapi.io/cards/cards')
 
 
         // корзина
-        (function () {
+function () {
           // VARS
           const productsContainer = document.querySelector("#grid");
           const cartContainer = document.querySelector("#shopping-cart");
@@ -420,4 +411,4 @@ fetch('https://624dcdf853326d0cfe52fb09.mockapi.io/cards/cards')
             checkout();
           });
           checkoutBtn.addEventListener("click", displayCartTotal);
-        })();
+        });
