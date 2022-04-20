@@ -59,20 +59,36 @@
 }
 
 .fastButton {
-    font-size: 12px;
+    font-size: 20px;
     line-height: 16px;
-    -webkit-transition: all .3s ease 0s;
-    transition: all .3s ease 0s;
     border-radius: 50px;
     background-color: rgba(255, 255, 255, .9);
     cursor: pointer;
-    padding: 20px 60px;
+    padding: 20px 20px;
     border: none;
     position: absolute;
-    transform: translateX(50%) translateY(300%);
+    transform: translateX(3%) translateY(220%);
     white-space: nowrap;
-    -webkit-box-shadow: 0 0 20px rgb(0 0 0 / 10%);
-    box-shadow: 0 0 20px rgb(0 0 0 / 10%);
     z-index: 3;
     opacity: 0;
 }
+
+.basketImg{
+  
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    transform: translateX(450%) translateY(-190%);
+    cursor: pointer;
+    border-radius: 50px;
+    border: none;
+}
+
+.button:hover .fastButton {
+    opacity: 1;
+    -webkit-transition: all .3s ease 0s;
+    transition: all .3s ease 0s;
+    -webkit-box-shadow: 0 0 20px rgb(0 0 0 / 10%);
+    box-shadow: 0 0 20px rgb(0 0 0 / 10%);
+}
+
