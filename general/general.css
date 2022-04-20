@@ -48,13 +48,19 @@ transform: scale(1.2);
     background-position: 0 center;
     padding-left: 18px;
     background-repeat: no-repeat;
+    font-size: 18px
 }
 
 
 
 .menu__link a {
     text-decoration: none;
-
+    background: rgb(175 175 175);
+    opacity: 0.6;
+    border-radius: 20px;
+    padding: 13px;
+    transition: 0.5;
+    width: 120px;
 }
 
 .menu__link a:hover {
