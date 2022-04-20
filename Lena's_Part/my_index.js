@@ -68,13 +68,11 @@ fetch('https://624dcdf853326d0cfe52fb09.mockapi.io/cards/cards')
     .then(() => {
         //получаем идентификатор элемента
         let but = [ ...document.getElementsByClassName('fastButton')];
-        console.log('but', but);
-        let images = document.getElementsByClassName('cardImg');
-
+       
         but.forEach((item) => {
-            console.log("item", item);
+            
             let img = item.nextSibling;
-            console.log(img);
+            
             //вешаем на него событие
             item.onclick = () => {
                 //производим какие-то действия
@@ -91,27 +89,8 @@ fetch('https://624dcdf853326d0cfe52fb09.mockapi.io/cards/cards')
     });
 
 
-// function resizeImage(img) {
-
-//     img.style.width = 500;
-//     img.style.height = 500;
-// }
 
 
-window.onload = function () {
-
-    //получаем идентификатор элемента
-    // let images = document.getElementById('cardImg');
-    // console.log('images', images);
-
-    // //вешаем на него событие
-    // images.onclick = function() {
-    //     //производим какие-то действия
-    //     if (this.style.width ='240px') this.style.height = '300px';
-    //     else this.style.width = '500px', this.style.height = '560px';
-
-    //       }
-}
 
 
 
