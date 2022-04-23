@@ -97,6 +97,12 @@ fetch('https://624dcdf853326d0cfe52fb09.mockapi.io/cards/cards')
       const basket = document.createElement('button');
       basket.className = 'basket';
       basket.innerHTML = '<img src = "./img/basket.jpg" class = "basketImg">'
+      
+      // for (let k = 0; i < 14; k++) {
+      //   k = 0;
+      //  basket.id = k++;
+      // }
+
       fastView.appendChild(basket);
 
       const price = document.createElement('p');
