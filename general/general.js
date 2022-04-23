@@ -91,17 +91,15 @@ fetch('https://624dcdf853326d0cfe52fb09.mockapi.io/cards/cards')
       img.setAttribute("id", "cardImg");
       img.className = 'cardImg'
       img.src = item.src;
-      img.id = item.id;
+      // img.id = item.id;
       fastView.appendChild(img);
 
       const basket = document.createElement('button');
       basket.className = 'basket';
       basket.innerHTML = '<img src = "./img/basket.jpg" class = "basketImg">'
+  
+       basket.setAttribute('data-id', item.id);
       
-      // for (let k = 0; i < 14; k++) {
-      //   k = 0;
-      //  basket.id = k++;
-      // }
 
       fastView.appendChild(basket);
 
@@ -264,12 +262,12 @@ fetch('https://624dcdf853326d0cfe52fb09.mockapi.io/cards/cards')
     // сохранить выбранный товар в локальном хранилище и вместе отобразить его в корзине
 
     // vars
-    const productId = clickedBtn.getAttribute("data-id");
+    const productId = clickedBtn.getAttribute("data-id"); //data-id
     const card = clickedBtn.parentElement.parentElement;
     const cardInfo = clickedBtn.parentElement;
     const prodImage = card.querySelector("img").src;
-    const prodName = cardInfo.querySelector("h4").textContent;
-    const prodPrice = cardInfo.querySelector(".card__price").textContent;
+    const prodName = cardInfo.querySelector("p").textContent; // h4
+    const prodPrice = cardInfo.querySelector(".pricing").textContent;//.card__price
 
     let isProductInCart = false;
 

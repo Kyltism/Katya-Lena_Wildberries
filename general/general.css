@@ -24,14 +24,6 @@
 
 }
 
-/* .header__logo a{
-    transition: 1s;
-}
-.header__logo a:hover{
-    font-size: 50PX;
-transform: scale(1.2);
-} */
-
 .formsearch {
     background: rgb(175 175 175);
     opacity: 0.6;
@@ -51,8 +43,6 @@ transform: scale(1.2);
     font-size: 18px
 }
 
-
-
 .menu__link a {
     text-decoration: none;
     background: rgb(175 175 175);
@@ -67,14 +57,10 @@ transform: scale(1.2);
     filter: grayscale(0.9);
 }
 
-/* .shopСart {
-    width: 20px;
-    height: 18px;
-} */
 
 
 
-
+/* Слайдщоу */
 .slideshow-container {
     max-width: 1500px;
     position: relative;
@@ -119,7 +105,6 @@ transform: scale(1.2);
 .prev:hover, .next:hover {
     background-color: rgba(102, 98, 98, 0.8);
 }
-
 
 
 /* The dots/bullets/indicators */
@@ -168,17 +153,20 @@ transform: scale(1.2);
     opacity: 0;
     pointer-events: none;
   }
+
   .header .header__cart .header__submenu .shopping-cart-container.open {
     -webkit-animation: fade-down 0.3s forwards;
             animation: fade-down 0.3s forwards;
     pointer-events: auto;
   }
+
   .header .header__cart .header__submenu .cart {
     fill: #333;
     float: left;
     margin-right: 6px;
     cursor: pointer;
   }
+
   .header .header__cart .header__cart-btn {
     padding: 10px;
     font-size: 1rem;
@@ -246,6 +234,15 @@ transform: scale(1.2);
   .header .header__cart .header__submenu .cart-btn:hover, .header .header__cart .header__submenu .cart-btn:focus {
     background-color: #b61a12;
     color: #fff;
+  }
+
+  .header .header__cart .header__cart-btn:hover, .header .header__cart .header__cart-btn:focus {
+    border: 3px solid #b61a12;
+  }
+  .header .header__cart .header__submenu .shopping-cart-container.open {
+    -webkit-animation: fade-down 0.3s forwards;
+            animation: fade-down 0.3s forwards;
+    pointer-events: auto;
   }
   .header .header__submenu .total-container {
     text-align: center;
