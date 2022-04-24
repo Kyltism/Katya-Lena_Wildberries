@@ -162,6 +162,7 @@
 
   .header .header__cart .header__submenu .cart {
     fill: #333;
+    display: inline-block;
     float: left;
     margin-right: 6px;
     cursor: pointer;

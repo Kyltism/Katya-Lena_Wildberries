@@ -266,7 +266,7 @@ fetch('https://624dcdf853326d0cfe52fb09.mockapi.io/cards/cards')
     const card = clickedBtn.parentElement.parentElement;
     const cardInfo = clickedBtn.parentElement;
     const prodImage = card.querySelector("img").src;
-    const prodName = cardInfo.querySelector("p").textContent; // h4
+    const prodName = cardInfo.querySelector(".nameGoods").textContent; // h4
     const prodPrice = cardInfo.querySelector(".pricing").textContent;//.card__price
 
     let isProductInCart = false;
