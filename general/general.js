@@ -136,7 +136,7 @@ fetch('https://624dcdf853326d0cfe52fb09.mockapi.io/cards/cards')
         let popup = document.querySelector(".img__overlay");
         let btn = document.querySelector(".fastButton");
 
-        btn.addEventListener("cl11ick", function (event) {
+        btn.addEventListener("click", function (event) {
           event.preventDefault();
           popup.classList.remove("hidden");
 
