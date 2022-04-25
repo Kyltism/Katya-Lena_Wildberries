@@ -16,14 +16,7 @@ body {
   color: #333;
   background-color: #fff;
 } */
-
-.goods {
-  width: 100%;
-  max-width: 992px;
-  margin: 0 auto;
-  padding: 0 1em;
-  background-color: #fff;
-}
+/*  */
 @media (min-width: 900px) {
   .container {
     padding: 0;
@@ -251,4 +244,10 @@ button {
     -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in;
   }
+}
+
+
+
+.header__cart-btn{
+  z-index: 10000;
 }
