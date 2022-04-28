@@ -126,32 +126,28 @@ fetch('https://624dcdf853326d0cfe52fb09.mockapi.io/cards/cards')
   .then(() => {
     //получаем идентификатор элемента
     let but = [...document.getElementsByClassName('fastButton')];
+    let popup = [...document.getElementsByClassName("img__overlay")];
+
+    popup.forEach((item) => {
+      item.addEventListener("click", function (event) {
+        event.preventDefault();
+        item.classList.add("hidden");
+      });
+    })
 
     but.forEach((item) => {
       //вешаем на него событие
       item.onclick = () => {
         //производим какие-то действия
 
-        let img = document.querySelector('.fastimg');
-        let popup = document.querySelector(".img__overlay");
-        let btn = document.querySelector(".fastButton");
+        //   let btn = document.querySelector(".fastButton");
 
-        btn.addEventListener("click", function (event) {
+        item.addEventListener("click", function (event) {
           event.preventDefault();
-          popup.classList.remove("hidden");
-
+          item.nextElementSibling.classList.remove("hidden");
         });
-
-        img.addEventListener("click", function (event) {
-          event.preventDefault();
-          popup.classList.add("hidden");
-        });
-
       }
-
     })
-
-
   });
 
 
