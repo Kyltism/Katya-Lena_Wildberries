@@ -30,7 +30,7 @@
   border-radius: 20px;
   padding: 13px;
   transition: 0.5;
-  width: 500px;
+  width: 400px;
 }
 
 .Search__input {
@@ -41,6 +41,22 @@
   padding-left: 18px;
   background-repeat: no-repeat;
   font-size: 18px
+}
+
+.Search {
+  display: flex;
+  gap: 10px;
+}
+
+.submitForm {
+  background: rgb(175 175 175);
+  opacity: 0.6;
+  border-radius: 20px;
+  padding: 13px;
+  transition: 0.5;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
 }
 
 .menu__link a {
@@ -66,7 +82,8 @@
   font-size: 25px;
   opacity: 0.6;
   border-radius: 20px;
-  padding: 13px;
+  padding: 11px;
+  color:#937b7b;
 }
 
 
@@ -124,7 +141,7 @@
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: rgb(191 128 186);
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -293,4 +310,9 @@
   border: none;
   margin: 51px 0px 3px -200px;
   z-index: 50;
+}
+
+/* для поиска */
+.container.hide {
+  display: none;
 }
