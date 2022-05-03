@@ -21,7 +21,10 @@
   font-weight: bold;
   color: #FFFFFF;
   text-decoration: none;
-
+  transition: 1s;
+}
+.header__logo:hover {
+  color: #2a0722;
 }
 
 .formsearch {
@@ -83,7 +86,7 @@
   opacity: 0.6;
   border-radius: 20px;
   padding: 11px;
-  color:#937b7b;
+  color: #937b7b;
 }
 
 
@@ -166,9 +169,6 @@
     opacity: 1
   }
 }
-
-
-
 
 
 
@@ -302,17 +302,46 @@
 }
 
 .basket__overlay {
-  width: 300px;
-  height: 500px;
-  background-color: rgb(85, 75, 75);
+  width: 340px;
+  height: 452px;
+  background-color: rgb(124 108 123);
   position: absolute;
   border-radius: 15px;
   border: none;
-  margin: 51px 0px 3px -200px;
+  margin: 78px 0px 3px -200px;
   z-index: 50;
 }
 
 /* для поиска */
 .container.hide {
   display: none;
+}
+
+.cardproducts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 18px;
+}
+
+.basket__overlay p {
+  padding: 14px;
+}
+
+.basket__overlay button {
+  border-radius: 3px;
+  cursor: pointer;
+  text-align: center;
+  padding: 8px 10px;
+  border: solid 1px #777777;
+  color: #7777777;
+  background: #ffffff;
+  transition: all .3s linear;
+  text-transform: uppercase;
+}
+
+.basket__overlay button:hover {
+  color: #fff;
+  background: rgb(53, 14, 41);
+  transition: all .3s linear;
 }

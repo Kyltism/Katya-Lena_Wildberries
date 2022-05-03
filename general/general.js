@@ -178,12 +178,12 @@ fetch('https://624dcdf853326d0cfe52fb09.mockapi.io/cards/cards')
     })
 
   })
-
+  // item.parentElement.parentElement.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstChild.lastChild.innerText
   .then(() => {
     let butcard = [...document.getElementsByClassName("basket")];
     butcard.forEach((item) => {
       item.onclick = () => {
-        cardProducts.push(new cardItem(item.parentElement.parentElement.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstChild.lastChild.innerText, item.parentElement.parentElement.nextElementSibling.firstChild.innerText));
+        cardProducts.push(new cardItem(item.parentElement.parentElement.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.innerText, item.parentElement.parentElement.lastElementChild.innerText));
         localStorage.setItem('cardProducts', JSON.stringify(cardProducts))
         document.getElementById('cardproducts').innerHTML = '';
         cardProducts.forEach(item => {
