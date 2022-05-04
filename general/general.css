@@ -4,6 +4,9 @@
   outline: none;
   font-family: 'Open Sans';
 }
+body{
+  background: linear-gradient(45deg, rgb(247, 230, 243), rgb(221, 230, 231));
+}
 
 .header {
   background: linear-gradient(45deg, rgb(165, 31, 155), rgb(82, 89, 182));
@@ -304,7 +307,7 @@
 .basket__overlay {
   width: 340px;
   height: 452px;
-  background-color: rgb(124 108 123);
+  background-color: rgb(224 206 222);;
   position: absolute;
   border-radius: 15px;
   border: none;
@@ -335,7 +338,7 @@
   padding: 8px 10px;
   border: solid 1px #777777;
   color: #7777777;
-  background: #ffffff;
+  background: rgb(137 100 134);
   transition: all .3s linear;
   text-transform: uppercase;
 }
