@@ -183,12 +183,12 @@ fetch('https://624dcdf853326d0cfe52fb09.mockapi.io/cards/cards')
     let butcard = [...document.getElementsByClassName("basket")];
     butcard.forEach((item) => {
       item.onclick = () => {
-        cardProducts.push(new cardItem(item.parentElement.parentElement.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.innerText, item.parentElement.parentElement.lastElementChild.innerText));
+        cardProducts.push(new cardItem(item.parentElement.parentElement.lastElementChild.innerText, item.parentElement.nextElementSibling.firstElementChild.innerText));
         localStorage.setItem('cardProducts', JSON.stringify(cardProducts))
         document.getElementById('cardproducts').innerHTML = '';
         cardProducts.forEach(item => {
           document.getElementById('cardproducts').innerHTML += `
-            <div class = "prodct-in-card"><div>${item.name}</div><div>${item.price}</div></div>
+            <div class = "prodct-in-card"><div>${item.title}</div><div>${item.price}</div></div>
           `
         })
       }
@@ -196,7 +196,7 @@ fetch('https://624dcdf853326d0cfe52fb09.mockapi.io/cards/cards')
     document.getElementById('cardproducts').innerHTML = '';
     cardProducts.forEach(item => {
       document.getElementById('cardproducts').innerHTML += `
-        <div class = "prodct-in-card">${item.name}${item.price}</div>
+        <div class = "prodct-in-card">${item.title}${item.price}</div>
       `
     })
     document.getElementById("deleteCard").onclick = () => {
